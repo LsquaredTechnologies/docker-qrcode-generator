@@ -1,20 +1,27 @@
-#Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Introduction 
 
-#Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+The current webapp generate QR codes from strings.
 
-#Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+# Getting Started
 
-#Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+To run the image, simply run the following command:
+```shell
+docker-compose up -d
+```
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+This will build the image if not already built and starts the docker container.
+
+By default, you can access the generator at address: http://localhost:8000/api/v1/qrcode/<data>.
+
+There is 2 another endpoints: `/ping` and `/health` which you can use to verify if the service is up and running.
+
+# Build and Test
+
+To build the image, simply run the following command:
+```shell
+docker-compose build
+```
+
+# Contribute
+
+Feel free to contribute and modify sources...

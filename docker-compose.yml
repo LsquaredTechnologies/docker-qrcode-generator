@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  qrcode_generator:
+    build:
+      context: ./src
+      args:
+      - APP=/srv/qrcode-generator
+    environment:
+    - SERVER_HOST=0.0.0.0
+    - SERVER_PORT=8000
+    ports:
+      - "8000:8000"
