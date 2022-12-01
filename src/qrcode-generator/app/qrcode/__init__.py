@@ -1,4 +1,4 @@
-from flask import Flask, Blueprint, request, send_file
+from flask import Blueprint, send_file
 from flask_qrcode import QRcode
 
 qrcode = Blueprint('qrcode', __name__)

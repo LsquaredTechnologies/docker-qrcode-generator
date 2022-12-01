@@ -9,7 +9,7 @@ def _initialize_blueprints(application):
     from app.ping import ping
     application.register_blueprint(ping, url_prefix='/conf')
     from app.qrcode import qrcode
-    application.register_blueprint(qrcode, url_prefix='/api/v1')
+    application.register_blueprint(qrcode)
 
 def create_app():
     '''
