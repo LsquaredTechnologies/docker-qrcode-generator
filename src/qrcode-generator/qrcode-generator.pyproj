@@ -16,7 +16,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>qrcode-generator</Name>
     <RootNamespace>qrcode-generator</RootNamespace>
-    <InterpreterId>MSBuild|py-3.6-x64|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|python3.8-x64|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,21 +41,21 @@
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="py-3.6-x64\">
-      <Id>py-3.6-x64</Id>
-      <Version>3.6</Version>
-      <Description>py-3.6-x64 (Python 3.6 (64-bit))</Description>
+    <Folder Include="app\" />
+    <Folder Include="app\health\" />
+    <Folder Include="app\qrcode\" />
+    <Folder Include="app\ping\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include=".venv\python3.8-x64\">
+      <Id>python3.8-x64</Id>
+      <Version>3.8</Version>
+      <Description>python3.8-x64 (Python 3.8 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
       <Architecture>X64</Architecture>
     </Interpreter>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="app\" />
-    <Folder Include="app\health\" />
-    <Folder Include="app\qrcode\" />
-    <Folder Include="app\ping\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
